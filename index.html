@@ -12,6 +12,19 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
   </head>
   <body>
@@ -175,10 +188,10 @@
 				 <strong>HP Corp.</strong><br> Surabaya , East java <br> Indonesian, 60227<br> <abbr title="Phone">P:</abbr> (123) 456-7890
 			</address>
 			<h2>
-				Heading
+				Maps
 			</h2>
 			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				<div id="googleMap" style="width:500px;height:380px;"></div>
 			</p>
 			<p>
 				<a class="btn" href="#">View details »</a>
